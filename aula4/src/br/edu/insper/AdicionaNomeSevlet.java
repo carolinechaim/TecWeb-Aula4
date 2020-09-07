@@ -38,19 +38,39 @@ public class AdicionaNomeSevlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
-	}
-	protected void service (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		String nome = request.getParameter("nome");
+		String email = request.getParameter("email");
+		String curso = request.getParameter("curso");
 		
 		PrintWriter out  = response.getWriter();
 		
         out.println("<html>");
         out.println("<body>");
         out.println("Nome: "+ nome );
+        out.println("e-mail: "+ email );
+        out.println("Curso: "+ curso );
+        out.println("</body>");
+        out.println("</html>");
+
+        
+	}
+	/*protected void service (HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String nome = request.getParameter("nome");
+		String email = request.getParameter("email");
+		String curso = request.getParameter("curso");
+		
+		PrintWriter out  = response.getWriter();
+		
+        out.println("<html>");
+        out.println("<body>");
+        out.println("Nome: "+ nome );
+        out.println("e-mail: "+ email );
+        out.println("Curso: "+ curso );
         out.println("</body>");
         out.println("</html>");
         
 		
-	}
+	}*/
 
 }
